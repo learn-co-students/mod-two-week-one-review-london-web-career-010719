@@ -1,0 +1,57 @@
+<%= form_with(model: sea, local: true) do |form| %>
+  <% if sea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sea.errors.count, "error") %> prohibited this sea from being saved:</h2>
+
+      <ul>
+      <% sea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :sea_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temperature %>
+    <%= form.text_field :temperature, id: :sea_temperature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :sea_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, id: :sea_image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mood %>
+    <%= form.text_field :mood, id: :sea_mood %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favorite_color %>
+    <%= form.text_field :favorite_color, id: :sea_favorite_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scariest_creature %>
+    <%= form.text_field :scariest_creature, id: :sea_scariest_creature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_mermaids %>
+    <%= form.check_box :has_mermaids, id: :sea_has_mermaids %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
