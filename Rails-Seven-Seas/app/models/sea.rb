@@ -1,0 +1,5 @@
+class Sea < ApplicationRecord
+
+
+    
+end

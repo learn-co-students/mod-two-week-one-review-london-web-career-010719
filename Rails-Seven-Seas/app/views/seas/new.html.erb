@@ -1,28 +1,61 @@
-<%= form_for @sea do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
-  <%= f.label :temperature %>
-  <%= f.number_field :temperature %>
 
-  <%= f.label :bio %>
-  <%= f.text_area :bio %>
 
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
 
-  <%= f.label :mood %>
-  <%= f.text_field :mood %>
 
-  <%= f.label :favorite_color %>
-  <%= f.text_field :favorite_color %>
+<div class="container">
+<%= form_for @sea, :html => {:class => "form-horizontal "} do |f| %>
+<div class="form-group">
+  <%= f.label :name, class: "col-md-4 control-label" %>
+  <div class="col-md-8">
+  <%= f.text_field :name, class: "form-control"  %> 
+</div>
+</div>
+<div class="form-group">
+  <%= f.label :temperature, class: "col-md-4 control-label" %>
+   <div class="col-md-8">
+  <%= f.number_field :temperature, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :bio, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.text_area :bio, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image_url, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.text_field :image_url, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mood, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.text_field :mood, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :favorite_color, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.text_field :favorite_color, class: "form-control" %>
 
-  <%= f.label :scariest_creature %>
-  <%= f.text_field :scariest_creature %>
-
-  <%= f.label :has_mermaids %>
-  <%= f.check_box :has_mermaids %>
-
-  <%=  f.submit %>
+  </div></div>
+  <div class="form-group">
+    <%= f.label :scariest_creature, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.text_field :scariest_creature, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%= f.label :has_mermaids, class: "col-md-4 control-label" %>
+     <div class="col-md-8">
+  <%= f.check_box :has_mermaids, class: "form-control" %>
+</div>
+  </div>
+  <div class="form-group">
+    <%=  f.submit %>
+</div>
 
   <% end %>
+</div>
