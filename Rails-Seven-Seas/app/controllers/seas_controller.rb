@@ -34,6 +34,7 @@ end
 def destroy
   @sea = Sea.find(params[:id])
   @sea.destroy
+  redirect_to "/seas"
 end 
 
 
